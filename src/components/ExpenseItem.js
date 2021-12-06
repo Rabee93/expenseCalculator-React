@@ -3,10 +3,11 @@ import React from "react";
 function ExpenseItem(){
   return(
     <div>
-    <h2> Expense Item </h2>
-    <p> March 8th 2021</p>
+    <div> March 8th 2021 </div>
+    <div>
     <h2>Car insurance</h2>
-    <p>$294.67</p>
+    <div>$294.67</div>
+    </div>
     </div>
 
   )
