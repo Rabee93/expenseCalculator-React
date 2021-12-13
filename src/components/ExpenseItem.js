@@ -9,6 +9,11 @@ function ExpenseItem(props){
   const day = props.date.toLocaleString('en-US',{day: '2-digit'});
   const year = props.date.getFullYear();
 
+  const clickHandler = () =>{
+    console.log("clicked")
+  }
+
+
   return(
     <Cards className="expense-item">
     <ExpenseDate month={month} day={day} year={year}/>
@@ -16,6 +21,7 @@ function ExpenseItem(props){
     <h2>{props.title}</h2>
     <div className="expense-item__price">${props.amount}</div>
     </div>
+    <button onClick = {clickHandler}>click me</button>
     </Cards>
 
   )
