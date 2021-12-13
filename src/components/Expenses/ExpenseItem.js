@@ -4,12 +4,13 @@ import ExpenseDate from "../Expenses/ExpenseDate.js"
 import Cards from "../UI/Cards.js"
 
 function ExpenseItem(props){
-  let title = props.title
+
+  const [title, useTitle] = useState(props.title)
 
 
 
-  const clickHandler = () =>{
-    console.log("clicked")
+  const ClickHandler = () =>{
+    useTitle("updated")
   }
 
 
@@ -20,7 +21,7 @@ function ExpenseItem(props){
     <h2>{title}</h2>
     <div className="expense-item__price">${props.amount}</div>
     </div>
-    <button onClick = {clickHandler}>click me</button>
+    <button onClick = {ClickHandler}>click me</button>
     </Cards>
 
   )
