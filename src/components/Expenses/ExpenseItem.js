@@ -1,13 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import"./ExpenseItem.css"
-import ExpenseDate from "./ExpenseDate.js"
-import Cards from "./Cards.js"
+import ExpenseDate from "../Expenses/ExpenseDate.js"
+import Cards from "../UI/Cards.js"
 
 function ExpenseItem(props){
+  let title = props.title
 
-  const month =  props.date.toLocaleString('en-US',{month: 'long'});
-  const day = props.date.toLocaleString('en-US',{day: '2-digit'});
-  const year = props.date.getFullYear();
+
 
   const clickHandler = () =>{
     console.log("clicked")
@@ -16,9 +15,9 @@ function ExpenseItem(props){
 
   return(
     <Cards className="expense-item">
-    <ExpenseDate month={month} day={day} year={year}/>
+    <ExpenseDate date = {props.date}/>
     <div className="expense-item__description">
-    <h2>{props.title}</h2>
+    <h2>{title}</h2>
     <div className="expense-item__price">${props.amount}</div>
     </div>
     <button onClick = {clickHandler}>click me</button>
