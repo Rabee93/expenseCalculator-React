@@ -25,9 +25,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) =>{
+    console.log('added APP')
+    console.log(expense)
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onSavedData ={addExpenseHandler} />
       <Expenses
       expense0 ={expenses[0]}
       expense1={expenses[1]}
