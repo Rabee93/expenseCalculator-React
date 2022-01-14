@@ -34,11 +34,7 @@ function App() {
   return (
     <div>
       <NewExpense onSavedData ={addExpenseHandler} />
-      <Expenses
-      expense0 ={expenses[0]}
-      expense1={expenses[1]}
-      expense2={expenses[2]}
-      expense3={expenses[3]}/>
+      <Expenses items = {expenses}/>
 
     </div>
   );

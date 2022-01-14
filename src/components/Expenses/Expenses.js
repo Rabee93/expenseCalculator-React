@@ -15,29 +15,10 @@ console.log('filtered')
     <div>
     <Cards className = "expenses">
     <ExpensesFilter selected= {savedData} onFilter = {savedFilteredData}/>
-    <ExpenseItem
-    title = {props.expense0.title}
-    amount = {props.expense0.amount}
-    date = {props.expense0.date}
-    />
-
-    <ExpenseItem
-    title= {props.expense1.title}
-    amount = {props.expense1.amount}
-    date = {props.expense1.date}
-    />
-
-    <ExpenseItem
-    title= {props.expense2.title}
-    amount = {props.expense2.amount}
-    date = {props.expense2.date}
-    />
-
-    <ExpenseItem
-    title = {props.expense3.title}
-    amount = {props.expense3.amount}
-    date = {props.expense3.date}
-    />
+   {props.items.map((expense) => (<ExpenseItem title = {expense.title}
+      amount = {expense.amount}
+      date= {expense.date}/>
+    ))}
     </Cards>
     </div>
   )
